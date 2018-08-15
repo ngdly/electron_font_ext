@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
+</head>
+<body>
+<!--We are using node <script>document.write(process.versions.node)</script>,-->
+<!--Chrome <script>document.write(process.versions.chrome)</script>,-->
+<!--and Electron <script>document.write(process.versions.electron)</script>.-->
+<div class="wrap">
+    <h1>TTF字体提取器</h1>
+    <p>选择TTF文字，输入要提取的文字后点击生成，即可。</p>
+    <div id="drag">点击选择文件 或 拖拽文件至此</div>
+    <h3>提取文字：</h3>
+    <div class="inbox">
+        <textarea id="content"></textarea>
+    </div>
+    <div class="checkbox">
+        生成文件类型：
+        <label><input type="radio" name="toFileType" value="ttf" checked>TTF</label>
+        <label><input type="radio" name="toFileType" value="woff">WOFF</label>
+        <label><input type="radio" name="toFileType" value="eot">EOT</label>
+    </div>
+    <div class="btns">
+        <a href="#" class="btn_submit" id="btn_submit">提取</a>
+        <a href="#" class="btn_clear" id="btn_clear">清空</a>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8" src="static/js/index.js"></script>
+</body>
+</html>

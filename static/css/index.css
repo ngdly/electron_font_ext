@@ -1,0 +1,80 @@
+
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{font-size:14px;margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{color:#333;outline:0;}
+input,select,button{
+    /*-webkit-appearance:none;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /*-webkit-user-modify: read-write-plaintext-only;*/
+    box-shadow: none;
+    outline: none;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+/**, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+body {background:#f1f1f1;}
+.wrap {
+    padding:20px;
+}
+h1 {line-height:80px;font-size:30px;text-align:center;}
+p {
+    line-height:160%;font-size:16px;
+}
+.filebox {
+    height:30px;
+}
+.inbox {
+
+}
+.inbox textarea {
+    width:100%;height:200px;border:1px solid #000;margin:0 auto;display:block;box-sizing:border-box;;
+}
+#drag {
+    height:50px;line-height:50px;text-align:center;background:#e0e0e0;border:5px solid #aaaaaa;
+}
+#drag:hover {
+    opacity:0.8;
+}
+.btns {
+    font-size:0;text-align:center;padding:10px 0;
+}
+.btns a {
+    height:30px;line-height:30px;font-size:14px;color:#fff;border-radius:5px;padding:0 20px;margin:0 5px;display:inline-block;
+}
+.btns a:hover {
+    opacity:0.8;
+}
+.btns .btn_submit {
+    background:#358ada;
+}
+.btns .btn_clear {
+    background:#d1bd60;
+}
+.checkbox {
+    padding:10px 0;
+}
+.checkbox label {
+    margin-right:20px;
+}
+.checkbox label input {
+    margin-right:5px;
+}
