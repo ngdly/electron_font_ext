@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 </head>
 <body>
 <!--We are using node <script>document.write(process.versions.node)</script>,-->
@@ -18,11 +18,28 @@
         <textarea id="content"></textarea>
     </div>
     <div class="checkbox">
+        特殊字符集合：
+        <label><input type="checkbox" name="characterSet" value="number_hz">人民币数字大写</label>
+    </div>
+    <div class="checkbox">
+        半角字符集合：
+        <label><input type="checkbox" name="characterSet" value="half_symbol">半角符号</label>
+        <label><input type="checkbox" name="characterSet" value="half_letter">半角字母</label>
+        <label><input type="checkbox" name="characterSet" value="half_digital">半角数字</label>
+    </div>
+    <div class="checkbox">
+        全角字符集合：
+        <label><input type="checkbox" name="characterSet" value="all_symbol">全角符号</label>
+        <label><input type="checkbox" name="characterSet" value="all_letter">全角字母</label>
+        <label><input type="checkbox" name="characterSet" value="all_digital">全角数字</label>
+    </div>
+    <div class="checkbox">
         生成文件类型：
         <label><input type="radio" name="toFileType" value="ttf" checked>TTF</label>
         <label><input type="radio" name="toFileType" value="woff">WOFF</label>
         <label><input type="radio" name="toFileType" value="eot">EOT</label>
     </div>
+    <div class="tip" id="tip"></div>
     <div class="btns">
         <a href="#" class="btn_submit" id="btn_submit">提取</a>
         <a href="#" class="btn_clear" id="btn_clear">清空</a>

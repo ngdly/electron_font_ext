@@ -41,7 +41,6 @@ function changeFile(name, path) {
   fileData.name = name;
   fileData.path = path;
   drag.innerHTML = path;
-  console.log({name, path});
 }
 
 drag.addEventListener('click', function() {
@@ -51,6 +50,9 @@ drag.addEventListener('click', function() {
       {name: 'TTF字体文件', extensions: ['ttf']},
     ],
   }, function(filePaths) {
+    if (!filePaths) {
+      return;
+    }
     const path = filePaths[0];
     const name = path.replace(/.+\/([^\/]+\.ttf)$/, '$1');
     changeFile(name, path);
@@ -60,14 +62,19 @@ drag.addEventListener('click', function() {
 document.querySelector('#btn_submit').addEventListener('click', function(e) {
   fileData.content = document.querySelector('#content').value;
   fileData.toFileType = document.querySelector('[name=toFileType]:checked').value;
-  if(!fileData.path){
-    alert("请选择文件")
+  fileData.characterSet = [];
+  document.querySelectorAll('[name=characterSet]:checked').forEach(e => fileData.characterSet.push(e.value));
+  if (!fileData.path) {
+    alert('请选择文件');
     return;
   }
-  if(!fileData.content){
-    alert("请输入内容")
+  if (!fileData.content && !fileData.characterSet.length) {
+    alert('请输入内容');
     return;
   }
   ipcRenderer.send('onttfConver', fileData);
   e.preventDefault();
+});
+ipcRenderer.on('ttfConverEnd', function(e, data) {
+  document.getElementById('tip').innerHTML = '提取成功：' + data.toPath;
 });
